@@ -23,3 +23,19 @@ CREATE TABLE invoices (
   FOREIGN KEY (medical_history_id) REFERENCES medical_histories(id),
   PRIMARY kEY (id)
 );
+
+CREATE TABLE treatments(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  type VARCHAR(100),
+  name VARCHAR(100),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE medical_histories_treatments(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  medical_histories_id INT,
+  treatments_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (medical_histories_id) REFERENCES medical_histories(id),
+  FOREIGN KEY (treatments_id) REFERENCES treatments(id)
+);
