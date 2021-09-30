@@ -1,8 +1,8 @@
-# Clinic database:
+# Clinic database
 
->
->
->
+Create a relational database for a clinic based on a database diagram
+
+![](https://raw.githubusercontent.com/microverseinc/curriculum-databases/main/db-structure/images/clinic_diagram.png?token=ATLYDOZL3ZJFGTDGGGHVWXDBL23O4)
 
 ## Getting Started
 
