@@ -51,3 +51,19 @@ CREATE TABLE invoice_items (
   FOREIGN kEY (invoice_id) REFERENCES invoices(id),
   FOREIGN kEY (treatment_id) REFERENCES treatments(id)
 );
+
+
+CREATE INDEX inx_medical_histories_patients_id ON medical_histories(patient_id);
+CREATE INDEX inx_invoice_invoice_items_id ON invoice_items(invoice_id);
+CREATE INDEX inx_treatment_invoice_items_id ON invoice_items(treatment_id);
+CREATE INDEX inx_invoices_medical_history_id ON invoices(medical_history_id);
+CREATE INDEX inx_medical_histories_medical_histories_treatments_id ON medical_histories_treatments(medical_histories_id);
+CREATE INDEX inx_treatments_id_medical_histories_treatments_id ON medical_histories_treatments(treatments_id);
+
+
+
+
+
+
+
+
